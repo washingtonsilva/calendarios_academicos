@@ -71,7 +71,8 @@ eventos[c(135:139, 242:244, 247:249)] <- "Recuperação"
 ## 9. Exames Finais
 eventos[c(347:349, 352:354)] <- "Exames Finais"
 
-## 10. Dia Letivo destinado as Atividades Complementares, Extensão ou Projetos Integrados
+## 10. Dia Letivo destinado as Atividades Complementares, Extensão ou Projetos 
+## Integrados
 eventos[c(
   38:41, 44:48, 54:56, 63, 70, 77, 84, 91, 105, 119, 122, 126,
   154, 168, 175, 182, 189, 196, 224, 231, 238, 259, 266, 273, 280, 294, 301,

@@ -80,7 +80,7 @@ Projetos Integrados ou Reposições"
 
 
 ## 9. dia letivo destinado a reposicao de aula de sexta-feira
-eventos[c(130)] <- "Dia Letivo Destinado à Reposição de aula de\nSexta-Feira"
+eventos[c(130)] <- "Dia Letivo Destinado à Reposição de aula de Sexta-Feira"
 
 ## 10. exames finais (do primeiro e segundo semestres)
 eventos[c(191:194, 352:355)] <- "Exames Finais"
@@ -137,6 +137,24 @@ calendR(
   pdf = TRUE,
   doc_name = here("pdf_graduacao/calendario_graduacao2023")
 )
+
+## Total de Dias Letivos do Calendario
+
+dias_letivos_graduacao <-
+  sum(eventos == "Dia Letivo com Ministração de Aula", na.rm = TRUE) +
+  sum(eventos == "Dia Letivo destinado à Atividades Complementares,\nExtensão, 
+Projetos Integrados ou Reposições", na.rm = TRUE) +
+  sum(eventos == "Inicio do Periodo Letivo", na.rm = TRUE) +
+  sum(eventos == "Fim do Periodo Letivo", na.rm = TRUE) +
+  sum(eventos == "XII Jornada de Educação, Ciência \ne Tecnologia", 
+      na.rm = TRUE) + 
+  sum(eventos == "Dia Letivo Destinado à Reposição de aula de Sexta-Feira", 
+      na.rm = TRUE)
+
+print(dias_letivos_graduacao)
+
+
+
 
 # ----------------------------------------------------------------------------
 # Fim do Script

@@ -133,6 +133,21 @@ calendR(
   doc_name = here("pdf_tecnicos/calendario_tecnicos2023")
 )
 
+## Total de Dias Letivos do Calendario
+
+dias_letivos_tecnicos <-
+  sum(eventos == "Etapa: Dia Letivo com Ministração de Aula", na.rm = TRUE) +
+  sum(eventos == "Dia Letivo destinado à Atividades Complementares, Extensão,\nProjetos Integrados ou Reposições", na.rm = TRUE) +
+  sum(eventos == "Inicio de Etapa", na.rm = TRUE) +
+  sum(eventos == "Fim de Etapa", na.rm = TRUE) +
+  sum(eventos == "XII Jornada de Educação, Ciência \ne Tecnologia", 
+      na.rm = TRUE) + 
+  sum(eventos == "Recuperação", na.rm = TRUE)
+  sum(eventos == "Dia Letivo Destinado à Reposição de aula de Sexta-Feira", 
+      na.rm = TRUE)
+
+print(dias_letivos_tecnicos)
+
 # ----------------------------------------------------------------------------
 # Fim do Script
 # ----------------------------------------------------------------------------
